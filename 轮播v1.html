@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <style>
+        .images {
+            display: flex;
+            align-items: flex-start;
+           
+            transition: transform 0.5s;
+
+
+        }
+
+        .images>img {
+            transition: transform 0.5s;
+        }
+
+        .window {
+           
+            width: 300px;
+            overflow: hidden
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <h3> 轮播
+        </h3>
+        <div class="window">
+            <div class="images" id=Images>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Red_star.svg/2000px-Red_star.svg.png" width=300 alt="">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Five-pointed_star.svg/2000px-Five-pointed_star.svg.png " width=300 alt="">
+                <img src="http://www.clker.com/cliparts/M/I/J/t/i/o/star-md.png" width=300 alt="">
+            </div>
+        </div>
+        <button id="p1">第一张</button>
+        <button id="p2">第二张</button>
+        <button id="p3">第三张</button>
+
+    </div>
+    <script>
+        $(p1).on('click', function() {
+            $(Images).css({
+                transform: 'translateX(0)'
+            })
+        })
+        $(p2).on('click', function() {
+            $(Images).css({
+                transform: 'translateX(-300px)'
+            })
+        })
+        $(p3).on('click', function() {
+            $(Images).css({
+                transform: 'translateX(-600px)'
+            })
+        })
+
+    </script>
+</body>
+
+</html>
